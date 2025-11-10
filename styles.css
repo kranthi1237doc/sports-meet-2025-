@@ -1,0 +1,82 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(130deg, #f6d365 0%, #fda085 100%);
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  background: #263e63;
+  color: #fff;
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+  border-bottom: 5px solid #ffb947;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px #ffb947;
+  letter-spacing: 1px;
+}
+
+header h2 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.executive {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #fdd835;
+}
+
+main {
+  padding: 1.5rem 1rem 2rem 1rem;
+}
+
+.event {
+  background: #fff;
+  margin: 2rem auto;
+  max-width: 650px;
+  box-shadow: 0 4px 14px #263e6356;
+  border-left: 9px solid #283e63;
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.event:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 22px #ffb947a2;
+}
+
+.event h2 {
+  margin-top: 0;
+  color: #ff6f3c;
+  font-size: 1.8rem;
+  text-shadow: 1px 1px 7px #263e63;
+}
+
+.event h3 {
+  color: #263e63;
+}
+
+.note {
+  color: #ff8c42;
+  font-style: italic;
+}
+
+.results ul {
+  padding-left: 1rem;
+  margin: 0.5rem 0 0 0;
+}
+
+footer {
+  background: #232832;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 4rem;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
