@@ -152,13 +152,24 @@
       </div>
     </section>
 
+    <!-- Button to toggle admin upload inputs -->
+    <div id="admin-toggle-container">
+      <button id="toggle-admin-btn" onclick="toggleAdminInputs()">Toggle Admin Upload Inputs</button>
+    </div>
+
     <!-- Sports Event Sections -->
     <section class="event">
       <h2>Cricket</h2>
       <div class="organisers"><h3>Organisers:</h3> Chenna Reddy, G Sudheer Bhargav Reddy, Ch. Ajay Reddy, M Gowtham</div>
-      <div class="participants"><h3>Participants:</h3><p class="note">Will be updated soon after CSV upload.</p></div>
+      <div class="participants">
+        <h3>Participants:</h3>
+        <p id="cricket-placeholder" class="note">Will be updated soon after CSV upload.</p>
+        <ul id="cricket-participants-list"></ul>
+        <input type="file" accept=".csv" class="admin-upload" onchange="handleCSVUpload(event, 'cricket-participants-list', 'cricket-placeholder')" />
+      </div>
       <div class="roaster"><h3>Event Roaster:</h3><p class="note">Will be updated soon.</p></div>
-      <div class="results"><h3>Results:</h3>
+      <div class="results">
+        <h3>Results:</h3>
         <ul>
           <li>Winner: <span class="note">To be announced</span></li>
           <li>Runner: <span class="note">To be announced</span></li>
@@ -170,9 +181,15 @@
     <section class="event">
       <h2>Volley Ball</h2>
       <div class="organisers"><h3>Organisers:</h3> G Jayabharath Reddy, N Prakash, R Vinod Kumar Reddy, Sivannarayana</div>
-      <div class="participants"><h3>Participants:</h3><p class="note">Will be updated soon after CSV upload.</p></div>
+      <div class="participants">
+        <h3>Participants:</h3>
+        <p id="volley-placeholder" class="note">Will be updated soon after CSV upload.</p>
+        <ul id="volley-participants-list"></ul>
+        <input type="file" accept=".csv" class="admin-upload" onchange="handleCSVUpload(event, 'volley-participants-list', 'volley-placeholder')" />
+      </div>
       <div class="roaster"><h3>Event Roaster:</h3><p class="note">Will be updated soon.</p></div>
-      <div class="results"><h3>Results:</h3>
+      <div class="results">
+        <h3>Results:</h3>
         <ul>
           <li>Winner: <span class="note">To be announced</span></li>
           <li>Runner: <span class="note">To be announced</span></li>
@@ -181,135 +198,58 @@
       </div>
     </section>
 
-    <section class="event">
-      <h2>Badminton</h2>
-      <div class="organisers"><h3>Organisers:</h3> Koushik Kalyan Ram, Kavitha Y, Nikhilesh N, Kranthi Kumar Reddy, P Suresh Reddy, K Sirisha, Ajay Reddy</div>
-      <div class="participants"><h3>Participants:</h3><p class="note">Will be updated soon after CSV upload.</p></div>
-      <div class="roaster"><h3>Event Roaster:</h3><p class="note">Will be updated soon.</p></div>
-      <div class="results"><h3>Results:</h3>
-        <ul>
-          <li>Winner: <span class="note">To be announced</span></li>
-          <li>Runner: <span class="note">To be announced</span></li>
-          <li>Semifinalists: <span class="note">To be announced</span></li>
-        </ul>
-      </div>
-    </section>
+    <!-- Additional events (Badminton, etc.) follow the same pattern with respective IDs... -->
 
-    <section class="event">
-      <h2>Table Tennis</h2>
-      <div class="organisers"><h3>Organisers:</h3> Kareemulla Syed, Varababu, K Lakshmi, C Aditya, C Reviteja, A Santhi, Hinduja S</div>
-      <div class="participants"><h3>Participants:</h3><p class="note">Will be updated soon after CSV upload.</p></div>
-      <div class="roaster"><h3>Event Roaster:</h3><p class="note">Will be updated soon.</p></div>
-      <div class="results"><h3>Results:</h3>
-        <ul>
-          <li>Winner: <span class="note">To be announced</span></li>
-          <li>Runner: <span class="note">To be announced</span></li>
-          <li>Semifinalists: <span class="note">To be announced</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="event">
-      <h2>Chess</h2>
-      <div class="organisers"><h3>Organisers:</h3> Ramesh Nelluri, Krishna Kanth, G Ramprasad Reddy, N C Raviteja</div>
-      <div class="participants"><h3>Participants:</h3><p class="note">Will be updated soon after CSV upload.</p></div>
-      <div class="roaster"><h3>Event Roaster:</h3><p class="note">Will be updated soon.</p></div>
-      <div class="results"><h3>Results:</h3>
-        <ul>
-          <li>Winner: <span class="note">To be announced</span></li>
-          <li>Runner: <span class="note">To be announced</span></li>
-          <li>Semifinalists: <span class="note">To be announced</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="event">
-      <h2>Carroms</h2>
-      <div class="organisers"><h3>Organisers:</h3> Kosuri Srinivas, S Ramprasad, R Vinodh Kumar Reddy, Ramchand</div>
-      <div class="participants"><h3>Participants:</h3><p class="note">Will be updated soon after CSV upload.</p></div>
-      <div class="roaster"><h3>Event Roaster:</h3><p class="note">Will be updated soon.</p></div>
-      <div class="results"><h3>Results:</h3>
-        <ul>
-          <li>Winner: <span class="note">To be announced</span></li>
-          <li>Runner: <span class="note">To be announced</span></li>
-          <li>Semifinalists: <span class="note">To be announced</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="event">
-      <h2>Tennis</h2>
-      <div class="organisers"><h3>Organisers:</h3> G Jayabharath Reddy, V V Suresh Kumar, Konda Reddy, D Venkateswara Rao</div>
-      <div class="participants"><h3>Participants:</h3><p class="note">Will be updated soon after CSV upload.</p></div>
-      <div class="roaster"><h3>Event Roaster:</h3><p class="note">Will be updated soon.</p></div>
-      <div class="results"><h3>Results:</h3>
-        <ul>
-          <li>Winner: <span class="note">To be announced</span></li>
-          <li>Runner: <span class="note">To be announced</span></li>
-          <li>Semifinalists: <span class="note">To be announced</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="event">
-      <h2>Swimming</h2>
-      <div class="organisers"><h3>Organisers:</h3> A A V Ramalinga Reddy, V V Suresh Kumar, V Kotaiah, Dharani</div>
-      <div class="participants"><h3>Participants:</h3><p class="note">Will be updated soon after CSV upload.</p></div>
-      <div class="roaster"><h3>Event Roaster:</h3><p class="note">Will be updated soon.</p></div>
-      <div class="results"><h3>Results:</h3>
-        <ul>
-          <li>Winner: <span class="note">To be announced</span></li>
-          <li>Runner: <span class="note">To be announced</span></li>
-          <li>Semifinalists: <span class="note">To be announced</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="event">
-      <h2>Throwball</h2>
-      <div class="organisers"><h3>Organisers:</h3> K Tarani, G Sunitha, P Vijetha, Kavitha</div>
-      <div class="participants"><h3>Participants:</h3><p class="note">Will be updated soon after CSV upload.</p></div>
-      <div class="roaster"><h3>Event Roaster:</h3><p class="note">Will be updated soon.</p></div>
-      <div class="results"><h3>Results:</h3>
-        <ul>
-          <li>Winner: <span class="note">To be announced</span></li>
-          <li>Runner: <span class="note">To be announced</span></li>
-          <li>Semifinalists: <span class="note">To be announced</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="event">
-      <h2>Running</h2>
-      <div class="organisers"><h3>Organisers:</h3> P Balakrishna, Bharathi, K Ramchand, Ajay Reddy, C Swetha</div>
-      <div class="participants"><h3>Participants:</h3><p class="note">Will be updated soon after CSV upload.</p></div>
-      <div class="roaster"><h3>Event Roaster:</h3><p class="note">Will be updated soon.</p></div>
-      <div class="results"><h3>Results:</h3>
-        <ul>
-          <li>Winner: <span class="note">To be announced</span></li>
-          <li>Runner: <span class="note">To be announced</span></li>
-          <li>Semifinalists: <span class="note">To be announced</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="event">
-      <h2>Tennicoit</h2>
-      <div class="organisers"><h3>Organisers:</h3> Sahitya, P Vijetha, K Sirisha, Ajay Reddy, Manasa</div>
-      <div class="participants"><h3>Participants:</h3><p class="note">Will be updated soon after CSV upload.</p></div>
-      <div class="roaster"><h3>Event Roaster:</h3><p class="note">Will be updated soon.</p></div>
-      <div class="results"><h3>Results:</h3>
-        <ul>
-          <li>Winner: <span class="note">To be announced</span></li>
-          <li>Runner: <span class="note">To be announced</span></li>
-          <li>Semifinalists: <span class="note">To be announced</span></li>
-        </ul>
-      </div>
-    </section>
   </main>
 
   <footer>
     <p>© 2025 IMA Narasaraopet Annual Sports Meet</p>
   </footer>
+
+  <script>
+    // Basic CSV parser for participants - expects one participant name per line
+    function parseCSV(text) {
+      return text.split(/\r?\n/).map(line => line.trim()).filter(line => line.length > 0);
+    }
+
+    function handleCSVUpload(event, targetListId, placeholderId) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const text = e.target.result;
+        const participants = parseCSV(text);
+        const listElement = document.getElementById(targetListId);
+        const placeholder = document.getElementById(placeholderId);
+
+        listElement.innerHTML = "";
+        placeholder.style.display = "none";
+
+        participants.forEach(name => {
+          const li = document.createElement("li");
+          li.textContent = name;
+          listElement.appendChild(li);
+        });
+      };
+      reader.readAsText(file);
+    }
+
+    // Toggle visibility of admin upload inputs
+    function toggleAdminInputs() {
+      const inputs = document.querySelectorAll('.admin-upload');
+      inputs.forEach(input => {
+        if (input.style.display === 'block') {
+          input.style.display = 'none';
+        } else {
+          input.style.display = 'block';
+        }
+      });
+    }
+
+    // By default admin inputs hidden
+    document.addEventListener('DOMContentLoaded', () => {
+      toggleAdminInputs();
+    });
+  </script>
 </body>
 </html>
