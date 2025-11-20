@@ -13,8 +13,8 @@ header {
   background-color: #fff;
   color: #0d4267;
   padding: 2rem 1rem 0.4rem 1rem;
-  border-bottom: 3px solid #287744;
-  box-shadow: 0 4px 10px rgba(40, 119, 68, 0.3);
+  border-bottom: 4px solid #287744;
+  box-shadow: 0 5px 10px rgba(40, 119, 68, 0.3);
 }
 
 .header-row {
