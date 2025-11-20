@@ -262,6 +262,33 @@ footer {
   border-radius: 10px;
   border: 2px solid #d7efd8;
 }
+/* Sponsors Section */
+.sponsors-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sponsor-logos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.sponsor-logo {
+  max-height: 80px;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+/* Team logos */
+.team-logo {
+  vertical-align: middle;
+  height: 32px;
+  width: 32px;
+  margin-right: 0.5rem;
+  object-fit: contain;
+}
 
 /* Responsive */
 @media (max-width: 960px) {
