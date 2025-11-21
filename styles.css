@@ -276,8 +276,8 @@ footer {
 }
 
 .sponsor-logo {
-  max-height: 160px;
-  max-width: 300px;
+  max-height: 120px;
+  max-width: 200px;
   object-fit: contain;
 }
 
