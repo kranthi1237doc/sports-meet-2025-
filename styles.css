@@ -276,16 +276,16 @@ footer {
 }
 
 .sponsor-logo {
-  max-height: 80px;
-  max-width: 150px;
+  max-height: 160px;
+  max-width: 300px;
   object-fit: contain;
 }
 
 /* Team logos */
 .team-logo {
   vertical-align: middle;
-  height: 32px;
-  width: 32px;
+  height: 64px;
+  width: 64px;
   margin-right: 0.5rem;
   object-fit: contain;
 }
