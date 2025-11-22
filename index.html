@@ -5,7 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IMA Narasaraopet Annual Sports Meet 2025</title>
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/png" href="ima.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="ima.png" sizes="32x32" />
+  <style>
+    .team-logo {
+      height: 32px;
+      width: 32px;
+      vertical-align: middle;
+      margin-right: 0.5rem;
+      object-fit: contain;
+    }
+    table.event-table {
+      width: 100%;
+      max-width: 600px;
+      border-collapse: collapse;
+      margin-bottom: 1rem;
+    }
+    table.event-table th,
+    table.event-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    p.placeholder {
+      font-style: italic;
+      color: #666;
+    }
+    ul.event-list {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    footer {
+      text-align: center;
+      margin: 2rem 0;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
   <!-- Header with logos -->
@@ -20,31 +54,48 @@
       <p>Stay Tuned for Updates</p>
     </div>
   </header>
-<!-- Sponsors Section -->
-<section id="sponsors" class="sponsors-section">
-  <h2>Our Sponsors</h2>
-  <div class="sponsor-logos">
-    <img src="mgh.png" alt="Mahatma Gandhi Hospitals Sponsor Logo" class="sponsor-logo" />
-    <img src="maxcare.png" alt="Max Care Hospitals Sponsor Logo" class="sponsor-logo" />
-    <img src="lgh.png" alt="Lakshmi Gayatri Hospitals Sponsor Logo" class="sponsor-logo" />
-    <!-- Add more sponsor logos as needed -->
-  </div>
-<div class="sponsor-logos">
-    <img src="radon.png" alt="Radon Sponsor Logo" class="sponsor-logo" />
-    <img src="trinity.png" alt="Trinity Sponsor Logo" class="sponsor-logo" />
-    <img src="arpita.png" alt="Arpita Sponsor Logo" class="sponsor-logo" />
-    <!-- Add more sponsor logos as needed -->
-  </div>
-</section>
 
+  <!-- Sponsors Section -->
+  <section id="sponsors" class="sponsors-section">
+    <h2>Our Sponsors</h2>
+    <div class="sponsor-logos">
+      <img
+        src="mgh.png"
+        alt="Mahatma Gandhi Hospitals Sponsor Logo"
+        class="sponsor-logo"
+      />
+      <img
+        src="maxcare.png"
+        alt="Max Care Hospitals Sponsor Logo"
+        class="sponsor-logo"
+      />
+      <img
+        src="lgh.png"
+        alt="Lakshmi Gayatri Hospitals Sponsor Logo"
+        class="sponsor-logo"
+      />
+    </div>
+    <div class="sponsor-logos">
+      <img src="radon.png" alt="Radon Sponsor Logo" class="sponsor-logo" />
+      <img
+        src="trinity.png"
+        alt="Trinity Sponsor Logo"
+        class="sponsor-logo"
+      />
+      <img src="arpita.png" alt="Arpita Sponsor Logo" class="sponsor-logo" />
+    </div>
+  </section>
+
+  <main>
   <main>
     <!-- Teams Section -->
     <section id="teams">
       <h2>Teams and Participants</h2>
+      
       <div class="team" id="LGH">
-    <h3><img src="lgheagles.png" alt="LGH Eagles Team Logo" class="team-logo" /> LGH  Eagles Team Participants</h3></h3>
-    <ul>
-      <li>M Vijay Reddy</li>
+        <h3><img src="lgheagles.png" alt="LGH Eagles Team Logo" class="team-logo" /> LGH Eagles Team Participants</h3>
+        <ul>
+          <li>M Vijay Reddy</li>
           <li>P Suresh Reddy</li>
           <li>M Kavitha Reddy</li>
           <li>G Srinivasa Reddy</li>
@@ -83,9 +134,10 @@
           <li>Ramprasad Reddy Nandyala</li>
         </ul>
       </div>
+
       <div class="team" id="MAX">
         <h3><img src="maxmaverics.png" alt="MAX Maverics Team Logo" class="team-logo" /> MAX Maverics Team Participants</h3>
-  <ul>
+        <ul>
           <li>Y Siva Pradeep</li>
           <li>Y Sri Harsha</li>
           <li>M Gowtham</li>
@@ -127,9 +179,10 @@
           <li>Baby Naga Priya</li>
         </ul>
       </div>
+
       <div class="team" id="MGH">
         <h3><img src="mghmarvels.png" alt="MGH Marvels Team Logo" class="team-logo" /> MGH Marvels Team Participants</h3>
-  <ul>
+        <ul>
           <li>Karasani Srinivasa Reddy</li>
           <li>G Jaya Bharath Reddy</li>
           <li>Pradeep Reddy Sura</li>
@@ -170,325 +223,442 @@
       </div>
     </section>
 
-    <!-- Cricket -->
-    <section class="event" id="cricket-section">
-      <h2>Cricket</h2>
-      <div class="organisers"><h3>Organisers:</h3> Chenna Reddy, G Sudheer Bhargav Reddy, Ch. Ajay Reddy, M Gowtham</div>
-      <div class="participants">
-        <h3>Participants:</h3>
-        <p id="cricket-part-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="cricket-participants-list"></ul>
-      </div>
-      <div class="roaster">
-        <h3>Event Roaster:</h3>
-        <p id="cricket-roaster-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="cricket-roaster-list"></ul>
-      </div>
-      <div class="results">
-        <h3>Results:</h3>
-        <p id="cricket-result-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="cricket-result-list"></ul>
-      </div>
-    </section>
-    <!-- Volley Ball -->
-    <section class="event" id="volley-section">
-      <h2>Volley Ball</h2>
-      <div class="organisers"><h3>Organisers:</h3> G Jayabharath Reddy, N Prakash, R Vinod Kumar Reddy, Sivannarayana</div>
-      <div class="participants">
-        <h3>Participants:</h3>
-        <p id="volley-part-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="volley-participants-list"></ul>
-      </div>
-      <div class="roaster">
-        <h3>Event Roaster:</h3>
-        <p id="volley-roaster-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="volley-roaster-list"></ul>
-      </div>
-      <div class="results">
-        <h3>Results:</h3>
-        <p id="volley-result-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="volley-result-list"></ul>
-      </div>
-    </section>
-    <!-- Badminton -->
-    <section class="event" id="badminton-section">
-      <h2>Badminton</h2>
-      <div class="organisers"><h3>Organisers:</h3> Koushik Kalyan Ram, Kavitha Y, Nikhilesh N, Kranthi Kumar Reddy, P Suresh Reddy, K Sirisha, Ajay Reddy</div>
-      <div class="participants">
-        <h3>Participants:</h3>
-        <p id="badminton-part-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="badminton-participants-list"></ul>
-      </div>
-      <div class="roaster">
-        <h3>Event Roaster:</h3>
-        <p id="badminton-roaster-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="badminton-roaster-list"></ul>
-      </div>
-      <div class="results">
-        <h3>Results:</h3>
-        <p id="badminton-result-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="badminton-result-list"></ul>
-      </div>
-    </section>
-    <!-- Table Tennis -->
-    <section class="event" id="tabletennis-section">
-      <h2>Table Tennis</h2>
-      <div class="organisers"><h3>Organisers:</h3> Kareemulla Syed, Varababu, K Lakshmi, C Aditya, C Reviteja, A Santhi, Hinduja S</div>
-      <div class="participants">
-        <h3>Participants:</h3>
-        <p id="tabletennis-part-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="tabletennis-participants-list"></ul>
-      </div>
-      <div class="roaster">
-        <h3>Event Roaster:</h3>
-        <p id="tabletennis-roaster-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="tabletennis-roaster-list"></ul>
-      </div>
-      <div class="results">
-        <h3>Results:</h3>
-        <p id="tabletennis-result-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="tabletennis-result-list"></ul>
-      </div>
-    </section>
-    <!-- Chess -->
-    <section class="event" id="chess-section">
-      <h2>Chess</h2>
-      <div class="organisers"><h3>Organisers:</h3> Ramesh Nelluri, Krishna Kanth, G Ramprasad Reddy, N C Raviteja</div>
-      <div class="participants">
-        <h3>Participants:</h3>
-        <p id="chess-part-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="chess-participants-list"></ul>
-      </div>
-      <div class="roaster">
-        <h3>Event Roaster:</h3>
-        <p id="chess-roaster-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="chess-roaster-list"></ul>
-      </div>
-      <div class="results">
-        <h3>Results:</h3>
-        <p id="chess-result-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="chess-result-list"></ul>
-      </div>
-    </section>
-    <!-- Carroms -->
-    <section class="event" id="carroms-section">
-      <h2>Carroms</h2>
-      <div class="organisers"><h3>Organisers:</h3> Kosuri Srinivas, S Ramprasad, R Vinodh Kumar Reddy, Ramchand</div>
-      <div class="participants">
-        <h3>Participants:</h3>
-        <p id="carroms-part-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="carroms-participants-list"></ul>
-      </div>
-      <div class="roaster">
-        <h3>Event Roaster:</h3>
-        <p id="carroms-roaster-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="carroms-roaster-list"></ul>
-      </div>
-      <div class="results">
-        <h3>Results:</h3>
-        <p id="carroms-result-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="carroms-result-list"></ul>
-      </div>
-    </section>
-    <!-- Tennis -->
-    <section class="event" id="tennis-section">
-      <h2>Tennis</h2>
-      <div class="organisers"><h3>Organisers:</h3> G Jayabharath Reddy, V V Suresh Kumar, Konda Reddy, D Venkateswara Rao</div>
-      <div class="participants">
-        <h3>Participants:</h3>
-        <p id="tennis-part-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="tennis-participants-list"></ul>
-      </div>
-      <div class="roaster">
-        <h3>Event Roaster:</h3>
-        <p id="tennis-roaster-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="tennis-roaster-list"></ul>
-      </div>
-      <div class="results">
-        <h3>Results:</h3>
-        <p id="tennis-result-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="tennis-result-list"></ul>
-      </div>
-    </section>
-    <!-- Swimming -->
-    <section class="event" id="swimming-section">
-      <h2>Swimming</h2>
-      <div class="organisers"><h3>Organisers:</h3> A A V Ramalinga Reddy, V V Suresh Kumar, V Kotaiah, Dharani</div>
-      <div class="participants">
-        <h3>Participants:</h3>
-        <p id="swimming-part-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="swimming-participants-list"></ul>
-      </div>
-      <div class="roaster">
-        <h3>Event Roaster:</h3>
-        <p id="swimming-roaster-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="swimming-roaster-list"></ul>
-      </div>
-      <div class="results">
-        <h3>Results:</h3>
-        <p id="swimming-result-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="swimming-result-list"></ul>
-      </div>
-    </section>
-    <!-- Box Cricket -->
-    <section class="event" id="Box Cricket-section">
-      <h2>Box Cricket</h2>
-      <div class="organisers"><h3>Organisers:</h3> K Tarani, G Sunitha, P Vijetha, Kavitha</div>
-      <div class="participants">
-        <h3>Participants:</h3>
-        <p id="Box Cricket-part-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="Box Cricket-participants-list"></ul>
-      </div>
-      <div class="roaster">
-        <h3>Event Roaster:</h3>
-        <p id="Box Cricket-roaster-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="Box Cricket-roaster-list"></ul>
-      </div>
-      <div class="results">
-        <h3>Results:</h3>
-        <p id="Box Cricket-result-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="Box Cricket-result-list"></ul>
-      </div>
-    </section>
-    <!-- Running -->
-    <section class="event" id="running-section">
-      <h2>Running</h2>
-      <div class="organisers"><h3>Organisers:</h3> P Balakrishna, Bharathi, K Ramchand, Ajay Reddy, C Swetha</div>
-      <div class="participants">
-        <h3>Participants:</h3>
-        <p id="running-part-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="running-participants-list"></ul>
-      </div>
-      <div class="roaster">
-        <h3>Event Roaster:</h3>
-        <p id="running-roaster-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="running-roaster-list"></ul>
-      </div>
-      <div class="results">
-        <h3>Results:</h3>
-        <p id="running-result-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="running-result-list"></ul>
-      </div>
-    </section>
-    <!-- Tennicoit -->
-    <section class="event" id="tennicoit-section">
-      <h2>Tennicoit</h2>
-      <div class="organisers"><h3>Organisers:</h3> Sahitya, P Vijetha, K Sirisha, Ajay Reddy, Manasa</div>
-      <div class="participants">
-        <h3>Participants:</h3>
-        <p id="tennicoit-part-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="tennicoit-participants-list"></ul>
-      </div>
-      <div class="roaster">
-        <h3>Event Roaster:</h3>
-        <p id="tennicoit-roaster-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="tennicoit-roaster-list"></ul>
-      </div>
-      <div class="results">
-        <h3>Results:</h3>
-        <p id="tennicoit-result-placeholder" class="note">Will be updated soon after CSV upload.</p>
-        <ul id="tennicoit-result-list"></ul>
-      </div>
-    </section>
+<section id="events">
+
+  <!-- Cricket -->
+  <section id="cricket" class="event-block">
+    <h2>Cricket</h2>
+    <p><strong>Organisers:</strong> Chenna Reddy, G Sudheer Bhargav Reddy, Ch. Ajay Reddy, M Gowtham</p>
+
+   <h3>Participants</h3>
+        <table id="cricket-participants-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="cricket-participants-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Event Roster</h3>
+        <table id="cricket-roster-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th><th>Date</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="cricket-roster-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Results</h3>
+        <table id="cricket-winners-table" class="event-table">
+          <thead>
+            <tr><th>Rank</th><th>Name</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="cricket-winners-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+      </section>
+
+
+  <!-- Volleyball -->
+  <section id="volleyball" class="event-block">
+    <h2>Volleyball</h2>
+    <p><strong>Organisers:</strong> G Jayabharath Reddy, N Prakash, R Vinod Kumar Reddy, Sivannarayana</p>
+
+    <h3>Participants</h3>
+        <table id="Volleyball-participants-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Volleyball-participants-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Event Roster</h3>
+        <table id="Volleyball-roster-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th><th>Date</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Volleyball-roster-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Results</h3>
+        <table id="Volleyball-winners-table" class="event-table">
+          <thead>
+            <tr><th>Rank</th><th>Name</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Volleyball-winners-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+      </section>
+
+  <!-- Badminton -->
+  <section id="badminton" class="event-block">
+    <h2>Badminton</h2>
+    <p><strong>Organisers:</strong> Koushik Kalyan Ram, Kavitha, Y.Nikhilesh, N.Kranthi Kumar Reddy, P Suresh Reddy, K Sirisha, Ajay Reddy</p>
+
+       <h3>Participants</h3>
+        <table id="Badminton-participants-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Badminton-participants-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Event Roster</h3>
+        <table id="Badminton-roster-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th><th>Date</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Badminton-roster-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Results</h3>
+        <table id="Badminton-winners-table" class="event-table">
+          <thead>
+            <tr><th>Rank</th><th>Name</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Badminton-winners-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+      </section>
+
+  <!-- Table Tennis -->
+  <section id="tabletennis" class="event-block">
+    <h2>Table Tennis</h2>
+    <p><strong>Organisers:</strong> Kareemulla Syed, Varababu, K Lakshmi, C Aditya, C Reviteja, A Santhi, Hinduja S</p>
+
+    <h3>Participants</h3>
+        <table id="Table Tennis-participants-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Table Tennis-participants-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Event Roster</h3>
+        <table id="Table Tennis-roster-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th><th>Date</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Table Tennis-roster-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Results</h3>
+        <table id="Table Tennis-winners-table" class="event-table">
+          <thead>
+            <tr><th>Rank</th><th>Name</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Table Tennis-winners-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+      </section>
+
+  <!-- Chess -->
+  <section id="chess" class="event-block">
+    <h2>Chess</h2>
+    <p><strong>Organisers:</strong> Ramesh Nelluri, Krishna Kanth, G Ramprasad Reddy, N C Raviteja</p>
+
+        <h3>Participants</h3>
+        <table id="Chess-participants-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Chess-participants-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Event Roster</h3>
+        <table id="Chess-roster-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th><th>Date</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Chess-roster-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Results</h3>
+        <table id="Chess-winners-table" class="event-table">
+          <thead>
+            <tr><th>Rank</th><th>Name</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Chess-winners-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+      </section>
+
+  <!-- Carroms -->
+  <section id="carroms" class="event-block">
+    <h2>Carroms</h2>
+    <p><strong>Organisers:</strong> Kosuri Srinivas, S Ramprasad, R Vinodh Kumar Reddy, Ramchand</p>
+
+            <h3>Participants</h3>
+        <table id="Carroms-participants-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Carroms-participants-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Event Roster</h3>
+        <table id="Carroms-roster-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th><th>Date</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Carroms-roster-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Results</h3>
+        <table id="Carroms-winners-table" class="event-table">
+          <thead>
+            <tr><th>Rank</th><th>Name</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Carroms-winners-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+      </section>
+
+  <!-- Tennis -->
+  <section id="tennis" class="event-block">
+    <h2>Tennis</h2>
+    <p><strong>Organisers:</strong> G Jayabharath Reddy, V V Suresh Kumar, Konda Reddy, D Venkateswara Rao</p>
+
+                <h3>Participants</h3>
+        <table id="Tennis-participants-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Tennis-participants-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Event Roster</h3>
+        <table id="Tennis-roster-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th><th>Date</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Tennis-roster-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Results</h3>
+        <table id="Tennis-winners-table" class="event-table">
+          <thead>
+            <tr><th>Rank</th><th>Name</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Tennis-winners-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+      </section>
+
+  <!-- Swimming -->
+  <section id="swimming" class="event-block">
+    <h2>Swimming</h2>
+    <p><strong>Organisers:</strong> A A V Ramalinga Reddy, V V Suresh Kumar, V Kotaiah, Dharani</p>
+
+                    <h3>Participants</h3>
+        <table id="Swimming-participants-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Swimming-participants-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Event Roster</h3>
+        <table id="Swimming-roster-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th><th>Date</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Swimming-roster-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Results</h3>
+        <table id="Swimming-winners-table" class="event-table">
+          <thead>
+            <tr><th>Rank</th><th>Name</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Swimming-winners-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+      </section>
+  <!-- Box Cricket -->
+  <section id="boxcricket" class="event-block">
+    <h2>Box Cricket</h2>
+    <p><strong>Organisers:</strong> K Tarani, G Sunitha, P Vijetha, Kavitha</p>
+
+                    <h3>Participants</h3>
+        <table id="Box Cricket-participants-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Box Cricket-participants-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Event Roster</h3>
+        <table id="Box Cricket-roster-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th><th>Date</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Box Cricket-roster-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Results</h3>
+        <table id="Box Cricket-winners-table" class="event-table">
+          <thead>
+            <tr><th>Rank</th><th>Name</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Box Cricket-winners-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+      </section>
+  <!-- Running -->
+  <section id="running" class="event-block">
+    <h2>Running</h2>
+    <p><strong>Organisers:</strong> P Balakrishna, Bharathi, K Ramchand, Ajay Reddy, C Swetha</p>
+
+                   <h3>Participants</h3>
+        <table id="Running-participants-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Running-participants-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Event Roster</h3>
+        <table id="Running-roster-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th><th>Date</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Running-roster-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Results</h3>
+        <table id="Running-winners-table" class="event-table">
+          <thead>
+            <tr><th>Rank</th><th>Name</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id=Running-winners-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+      </section>
+
+  <!-- Tennicoit -->
+  <section id="tennicoit" class="event-block">
+    <h2>Tennicoit</h2>
+    <p><strong>Organisers:</strong> Sahitya, P Vijetha, K Sirisha, Ajay Reddy, Manasa</p>
+
+                   <h3>Participants</h3>
+        <table id="Tennicoit-participants-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Tennicoit-participants-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Event Roster</h3>
+        <table id="Tennicoit-roster-table" class="event-table">
+          <thead>
+            <tr><th>Participant</th><th>Team</th><th>Date</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Tennicoit-roster-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+
+        <h3>Results</h3>
+        <table id="Tennicoit-winners-table" class="event-table">
+          <thead>
+            <tr><th>Rank</th><th>Name</th><th>Team</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="Tennicoit-winners-placeholder" class="placeholder">
+          Will be updated soon after CSV upload.
+        </p>
+      </section>
+</section>
   </main>
 
   <footer>
     <p>© 2025 IMA Narasaraopet Annual Sports Meet</p>
   </footer>
 
-  <script>
-    function parseCSVRows(csvText) {
-      return csvText.trim().split(/\r?\n/).map(line => line.split(',').map(cell => cell.trim()));
-    }
-
-    function updateListFromArray(listId, items, itemIndex=0) {
-      const list = document.getElementById(listId);
-      list.innerHTML = '';
-      items.forEach(row => {
-        const li = document.createElement('li');
-        if (Array.isArray(row)) {
-          li.textContent = row[itemIndex];
-        } else {
-          li.textContent = row;
-        }
-        list.appendChild(li);
-      });
-    }
-
-    async function fetchAndUpdate(csvFilename, listId, placeholderId, options = {}) {
-      const placeholder = document.getElementById(placeholderId);
-      const list = document.getElementById(listId);
-      try {
-        const response = await fetch(csvFilename);
-        if (!response.ok) throw new Error('File not found');
-        const text = await response.text();
-        const rows = parseCSVRows(text);
-
-        if (options.multicolumn) {
-          list.innerHTML = '';
-          rows.forEach(row => {
-            const li = document.createElement('li');
-            li.textContent = row.join(' - ');
-            list.appendChild(li);
-          });
-        } else {
-          updateListFromArray(listId, rows);
-        }
-
-        placeholder.style.display = 'none';
-        list.style.display = 'block';
-      } catch(error) {
-        placeholder.style.display = 'block';
-        list.style.display = 'none';
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-      // For all events
-      fetchAndUpdate('cricket_participants.csv', 'cricket-participants-list', 'cricket-part-placeholder');
-      fetchAndUpdate('cricket_roaster.csv', 'cricket-roaster-list', 'cricket-roaster-placeholder');
-      fetchAndUpdate('cricket_results.csv', 'cricket-result-list', 'cricket-result-placeholder', { multicolumn: true });
-
-      fetchAndUpdate('volley_participants.csv', 'volley-participants-list', 'volley-part-placeholder');
-      fetchAndUpdate('volley_roaster.csv', 'volley-roaster-list', 'volley-roaster-placeholder');
-      fetchAndUpdate('volley_results.csv', 'volley-result-list', 'volley-result-placeholder', { multicolumn: true });
-
-      fetchAndUpdate('badminton_participants.csv', 'badminton-participants-list', 'badminton-part-placeholder');
-      fetchAndUpdate('badminton_roaster.csv', 'badminton-roaster-list', 'badminton-roaster-placeholder');
-      fetchAndUpdate('badminton_results.csv', 'badminton-result-list', 'badminton-result-placeholder', { multicolumn: true });
-
-      fetchAndUpdate('tabletennis_participants.csv', 'tabletennis-participants-list', 'tabletennis-part-placeholder');
-      fetchAndUpdate('tabletennis_roaster.csv', 'tabletennis-roaster-list', 'tabletennis-roaster-placeholder');
-      fetchAndUpdate('tabletennis_results.csv', 'tabletennis-result-list', 'tabletennis-result-placeholder', { multicolumn: true });
-
-      fetchAndUpdate('chess_participants.csv', 'chess-participants-list', 'chess-part-placeholder');
-      fetchAndUpdate('chess_roaster.csv', 'chess-roaster-list', 'chess-roaster-placeholder');
-      fetchAndUpdate('chess_results.csv', 'chess-result-list', 'chess-result-placeholder', { multicolumn: true });
-
-      fetchAndUpdate('carroms_participants.csv', 'carroms-participants-list', 'carroms-part-placeholder');
-      fetchAndUpdate('carroms_roaster.csv', 'carroms-roaster-list', 'carroms-roaster-placeholder');
-      fetchAndUpdate('carroms_results.csv', 'carroms-result-list', 'carroms-result-placeholder', { multicolumn: true });
-
-      fetchAndUpdate('tennis_participants.csv', 'tennis-participants-list', 'tennis-part-placeholder');
-      fetchAndUpdate('tennis_roaster.csv', 'tennis-roaster-list', 'tennis-roaster-placeholder');
-      fetchAndUpdate('tennis_results.csv', 'tennis-result-list', 'tennis-result-placeholder', { multicolumn: true });
-
-      fetchAndUpdate('swimming_participants.csv', 'swimming-participants-list', 'swimming-part-placeholder');
-      fetchAndUpdate('swimming_roaster.csv', 'swimming-roaster-list', 'swimming-roaster-placeholder');
-      fetchAndUpdate('swimming_results.csv', 'swimming-result-list', 'swimming-result-placeholder', { multicolumn: true });
-
-      fetchAndUpdate('Box Cricket_participants.csv', 'Box Cricket-participants-list', 'Box Cricket-part-placeholder');
-      fetchAndUpdate('Box Cricket_roaster.csv', 'Box Cricket-roaster-list', 'Box Cricket-roaster-placeholder');
-      fetchAndUpdate('Box Cricket_results.csv', 'Box Cricket-result-list', 'Box Cricket-result-placeholder', { multicolumn: true });
-
-      fetchAndUpdate('running_participants.csv', 'running-participants-list', 'running-part-placeholder');
-      fetchAndUpdate('running_roaster.csv', 'running-roaster-list', 'running-roaster-placeholder');
-      fetchAndUpdate('running_results.csv', 'running-result-list', 'running-result-placeholder', { multicolumn: true });
-
-      fetchAndUpdate('tennicoit_participants.csv', 'tennicoit-participants-list', 'tennicoit-part-placeholder');
-      fetchAndUpdate('tennicoit_roaster.csv', 'tennicoit-roaster-list', 'tennicoit-roaster-placeholder');
-      fetchAndUpdate('tennicoit_results.csv', 'tennicoit-result-list', 'tennicoit-result-placeholder', { multicolumn: true });
-    });
-  </script>
+  <script src="events.js"></script>
 </body>
 </html>
