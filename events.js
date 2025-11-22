@@ -9,20 +9,23 @@ async function loadTable(csvFile, tableId, columnsCount) {
     const tbody = document.querySelector(`#${tableId} tbody`);
     tbody.innerHTML = '';
 
-    rows.forEach(line => {
-      const cells = line.split(',').map(c => c.trim());
-      if (cells.length < columnsCount) return;
+    // Skip the header row (assumed first line)
+    for (let i = 1; i < rows.length; i++) {
+      const cells = rows[i].split(',').map(c => c.trim());
+      if (cells.length < columnsCount) continue;
       const tr = document.createElement('tr');
-      for (let i = 0; i < columnsCount; i++) {
+      for (let j = 0; j < columnsCount; j++) {
         const td = document.createElement('td');
-        td.textContent = cells[i] || '';
+        td.textContent = cells[j] || '';
         tr.appendChild(td);
       }
       tbody.appendChild(tr);
-    });
+    }
 
-    // Hide placeholder
-    document.getElementById(tableId.replace('-table', '-placeholder')).style.display = 'none';
+    // Hide placeholder when loaded
+    const placeholderId = tableId.replace('-table', '-placeholder');
+    const ph = document.getElementById(placeholderId);
+    if (ph) ph.style.display = 'none';
 
   } catch (e) {
     const ph = document.getElementById(tableId.replace('-table', '-placeholder'));
