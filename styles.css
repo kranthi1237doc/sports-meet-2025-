@@ -311,4 +311,128 @@ footer {
   header h1 {
     font-size: 2.5rem;
   }
+  /* Existing styles */
+.team-logo {
+  height: 32px;
+  width: 32px;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+  object-fit: contain;
 }
+table.event-table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+table.event-table th,
+table.event-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+p.placeholder {
+  font-style: italic;
+  color: #666;
+}
+ul.event-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+footer {
+  text-align: center;
+  margin: 2rem 0;
+  color: #555;
+}
+
+/* --- Sportive look and embossing --- */
+.event-table {
+  border: 2px solid #0066cc;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.event-table th,
+.event-table td {
+  border: 1px solid #0066cc;
+  padding: 10px;
+  text-align: left;
+  background-color: #ffffff;
+}
+
+.event-table th {
+  background-color: #0066cc;
+  color: white;
+  font-weight: bold;
+}
+
+/* --- Animated scrolling logo marquee --- */
+.logo-marquee {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: marquee 15s linear infinite;
+  background-color: #f0f8ff;
+  padding: 10px 0;
+  margin: 10px 0;
+}
+
+.logo-marquee img {
+  height: 40px;
+  margin: 0 20px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* --- Fade-in animation for events --- */
+.event-block {
+  animation: fadeInUp 1s ease-out forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Logo image hover animation --- */
+.logo-img,
+.sponsor-logo,
+.team-logo {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-img:hover,
+.sponsor-logo:hover,
+.team-logo:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Sportive background and event icon --- */
+body {
+  background-image: url('sportive-bg.jpg'); /* Replace with your sporty background image */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.event-block h2::before {
+  content: '🏆 ';
+  color: #ffcc00;
+}
+
